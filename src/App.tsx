@@ -1,4 +1,24 @@
-import { Box, Flex, Grid, GridItem, HStack, Show } from "@chakra-ui/react";
+import { Button, HStack } from "@chakra-ui/react"
+import { RiArrowRightLine, RiMailLine } from "react-icons/ri"
+
+const Demo = () => {
+  return (
+    <HStack>
+      <Button colorScheme="teal" variant="solid">
+        <RiMailLine /> Email
+      </Button>
+      <Button colorScheme="teal" variant="outline">
+        Call us <RiArrowRightLine />
+      </Button>
+    </HStack>
+  )
+}
+
+
+
+
+
+/*import { Box, Flex, Grid, GridItem, HStack, Show } from "@chakra-ui/react";
 import { useState } from "react";
 import GameGrid from "./components/GameGrid";
 import GameHeading from "./components/GameHeading";
@@ -56,3 +76,4 @@ function App() {
 }
 
 export default App;
+*/
