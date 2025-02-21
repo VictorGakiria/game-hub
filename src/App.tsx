@@ -1,18 +1,30 @@
-import { Button, Stack, Theme , Box } from "@chakra-ui/react"
+import { Button, Stack, Theme , Box, Container } from "@chakra-ui/react"
 
 const App = () => {
+
+  const boxStyle={
+    bg: 'white',
+    color: 'red',
+    p: '4',
+    }
   return (
-    <Stack align="flex-start">
-      <Button variant="solid" colorScheme="teal">
+    <Container maxW="container.lg" p="4">
+    <Stack align="" spacing="4">
+      <Button variant="solid" colorScheme="red">
         Auto Button
       </Button>
       <Box p="4" bg="gray.800" color="white">
         <Button variant="solid" colorScheme="teal">Dark Button</Button>
       </Box>
-      <Box p="4" bg="gray.100" color="black">
-        <Button variant="solid" colorScheme="teal">Light Button</Button>
-      </Box>
+      <Box p="4" bg='yellow' color="black">
+        <text style={{color: 'black'}}>kaizen</text>
+              </Box>
+
+              <Box sx={{boxStyle}}>
+                Kaizen
+              </Box>
     </Stack>
+    </Container>
   )
 }
 export default App
