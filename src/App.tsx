@@ -4,28 +4,21 @@ const App = () => {
 
   const boxStyle={
     bg: 'white',
-    color: 'red',
+    color:'black',
     p: '4',
+    filter: 'blur(0.2px)',
+    ':hover': {
+      color:'yellow',
+      bg: 'black',
     }
+  }
   return (
-    <Container maxW="container.lg" p="4">
-    <Stack align="" spacing="4">
-      <Button variant="solid" colorScheme="red">
-        Auto Button
-      </Button>
-      <Box p="4" bg="gray.800" color="white">
-        <Button variant="solid" colorScheme="teal">Dark Button</Button>
-      </Box>
-      <Box p="4" bg='yellow' color="black">
-        <text style={{color: 'black'}}>kaizen</text>
-              </Box>
-
-              <Box sx={{boxStyle}}>
-                Kaizen
-              </Box>
-    </Stack>
-    </Container>
-  )
+    <Container maxW="container.l" centerContent>
+    <Box sx={boxStyle}>
+    Kaizen
+  </Box>
+  </Container>
+     )
 }
 export default App
 
