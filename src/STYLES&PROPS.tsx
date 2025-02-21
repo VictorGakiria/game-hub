@@ -1,3 +1,7 @@
+// STYLES & PROPS
+
+
+
 import { Button, Stack, Theme , Box, Container } from "@chakra-ui/react"
 
 const App = () => {
