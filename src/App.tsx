@@ -1,21 +1,21 @@
-import { Button, HStack } from "@chakra-ui/react"
-import { RiArrowRightLine, RiMailLine } from "react-icons/ri"
+import { Button, Stack, Theme , Box } from "@chakra-ui/react"
 
-const Demo = () => {
+const App = () => {
   return (
-    <HStack>
-      <Button colorScheme="teal" variant="solid">
-        <RiMailLine /> Email
+    <Stack align="flex-start">
+      <Button variant="solid" colorScheme="teal">
+        Auto Button
       </Button>
-      <Button colorScheme="teal" variant="outline">
-        Call us <RiArrowRightLine />
-      </Button>
-    </HStack>
+      <Box p="4" bg="gray.800" color="white">
+        <Button variant="solid" colorScheme="teal">Dark Button</Button>
+      </Box>
+      <Box p="4" bg="gray.100" color="black">
+        <Button variant="solid" colorScheme="teal">Light Button</Button>
+      </Box>
+    </Stack>
   )
 }
-
-
-
+export default App
 
 
 /*import { Box, Flex, Grid, GridItem, HStack, Show } from "@chakra-ui/react";
