@@ -1,4 +1,4 @@
-import { Box, Flex } from "@chakra-ui/react"
+/*import { Box, Flex } from "@chakra-ui/react"
 
 export default function FlexLayout() {
   return (
@@ -15,4 +15,6 @@ export default function FlexLayout() {
 </Flex>
 
   )
-}
+}  
+
+*/

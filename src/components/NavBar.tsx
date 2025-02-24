@@ -1,20 +1,17 @@
-import { HStack, Image } from '@chakra-ui/react'
-import logo from '../assets/logo.webp';
-import ColorModeSwitch from './ColorModeSwitch';
-import SearchInput from './SearchInput';
+import { Box, Flex, Spacer } from "@chakra-ui/react"
 
-interface Props {
-  onSearch: (searchText: string) => void;
-}
 
-const NavBar = ({ onSearch }: Props) => {
+
+
+export default function FlexLayout() {
   return (
-    <HStack padding='10px'>
-      <Image src={logo} boxSize='60px' />
-      <SearchInput onSearch={onSearch} />
-      <ColorModeSwitch />
-    </HStack>
-  )
-}
+<Flex bg='green.500' color='black' mx={5}>
+  <h1> K A IZ E N</h1>
+  <Spacer/>
+  <Box> Cars</Box>
+   <Box> Trucks</Box>
+  <Box> Socials</Box>
+</Flex>
 
-export default NavBar
+  )
+}  

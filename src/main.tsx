@@ -1,10 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { ChakraProvider, ColorModeScript } from '@chakra-ui/react'
-import App from './STYLES&PROPS'
+//import App from './STYLES&PROPS'
 import theme from './theme'
 import './index.css'
-import FlexLayout from './flexlayout'
+import FlexLayout from './components/NavBar'
+//import FlexLayout from './flexlayout'
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <ChakraProvider theme={theme}>
