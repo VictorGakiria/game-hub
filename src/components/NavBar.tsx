@@ -8,6 +8,8 @@ export default function FlexLayout() {
     padding: "10px",
     textAlign: "center" as "center",
     textShadow: "2px 2px 4px #000000",
+    bg: "rgba(255, 255, 255, 0.1)",
+    borderRadius: "12px", boxShadow: "lg",
   };
 
   const boxStyle = {
