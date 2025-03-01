@@ -3,13 +3,12 @@ import { Grid } from "@chakra-ui/react"
 
 export default function Grids(){
   return (
-    <Grid templateColumns="repeat(3, 1fr)" gap="6">
-      <div>20</div>
-      kaizen
-      <div>20</div>
-      <div>20</div>
-    </Grid>
+    <Grid templateColumns="repeat(4, 5fr)" gap="2" color={"orange"}
+     bg={"white"} p={50} borderRight={'1px'}>
+      <div style={{ border: '1px solid black' }}>20</div>
+      <div style={{ border: '1px solid black' }} >20</div>
+      <div style={{ border: '1px solid black' }}>20</div>
+        </Grid>
   )
 }
-// Compare this snippet from src/components/decorative-box.tsx:
-// import { Box } from "@chakra-ui/react"       
+       
