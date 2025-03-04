@@ -1,20 +1,28 @@
-import { Grid } from "@chakra-ui/react"
+import { Grid, Spacer } from "@chakra-ui/react"
 
 
 export default function Grids(){
   return (
-    <Grid templateColumns="repeat(4, 5fr)" gap="2" color={"orange"}
-     bg={"white"} p={50} >
-      <div style={{ border: '1px solid black', backgroundColor:'darkred' }}>20</div>
-      <div style={{ border: '1px solid black', backgroundColor:'darkgreen' }}>20</div>
-      <div style={{ border: '1px solid black' ,backgroundColor:'darkorange' }} >20</div>
-      <div style={{ border: '1px solid black' , backgroundColor:'darkgrey'}}>20</div>
-      <div style={{ border: '1px solid black', backgroundColor:'darkblue' }}>20</div>
-      <div style={{ border: '1px solid black', backgroundColor:'brown' }} >20</div>
-      <div style={{ border: '1px solid black', backgroundColor:'black'}}>20</div>
-      <div style={{ border: '1px solid black', backgroundColor:'green' }} >20</div>
-      <div style={{ border: '1px solid black', backgroundColor:'red' }}>20</div>
+    <>
+      <div style={{ border: '1px solid black', backgroundColor:'purple',
+         height:'100vh' , width:'200px', float:'left'}}>side</div>
+
+
+<h6> Tabs</h6>
+
+      <Grid templateColumns="repeat(3, 5fr)" gap="2" color={"orange"}
+     bg={"white"} p={50} height={'100vh'} width={'auto'} >
+      <div style={{ border: '1px solid black'}}>20</div>
+      <div style={{ border: '1px solid black'}}>20</div>
+      <div style={{ border: '1px solid black'  }} >20</div>
+      <div style={{ border: '1px solid black' }}>20</div>
+      <div style={{ border: '1px solid black' }}>20</div>
+      <div style={{ border: '1px solid black'}} >20</div>
+      <div style={{ border: '1px solid black'}}>20</div>
+      <div style={{ border: '1px solid black'}} >20</div>
+      <div style={{ border: '1px solid black'}}>20</div>
         </Grid>
+    </>
   )
 }
        
