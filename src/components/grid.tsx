@@ -12,6 +12,8 @@ import { FaStarOfLife } from "react-icons/fa";
 import { FaStarAndCrescent } from "react-icons/fa";
 import { FaStarOfDavid } from "react-icons/fa";
 import { FaRegFaceLaughWink } from "react-icons/fa6";
+import { SiBugatti } from "react-icons/si";
+
 import { FaRegFaceGrinTongueSquint } from "react-icons/fa6";
 
 
@@ -21,6 +23,8 @@ import { FaRegFaceGrinTongueSquint } from "react-icons/fa6";
 
 
 export default function Grids(){
+  const breakpoints = {
+  }
   return (
     <>
       <div style={{ border: '1px solid black', backgroundColor:'black',
@@ -35,22 +39,21 @@ export default function Grids(){
          </div>
 
 
-<h6 style={{ padding: '20px', textAlign:'center', width: '100vw', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-  <FaCarSide style={{ marginRight: '10px' }} /> K  A  IZ  E  N   MOTORS
-</h6>
+<h6 style={{ padding: '30px', textAlign:'center', width: '100vw', backgroundColor: 'silver'}}>K  A  IZ  E  N   MOTORS </h6>
 
-<Grid templateColumns="repeat(3, 5fr)" gap="2" color={"orange"}
- bg={{ base: "white", md: "gray.100", lg: "blue.100" ,}} height="100vh" width="auto" >
-  <div style={{ border: '1px solid black'}}>20</div>
-  <div style={{ border: '1px solid black'}}>20</div>
-  <div style={{ border: '1px solid black'  }} >20</div>
-  <div style={{ border: '1px solid black' }}>20</div>
-  <div style={{ border: '1px solid black' }}>20</div>
-  <div style={{ border: '1px solid black'}} >20</div>
-  <div style={{ border: '1px solid black'}}>20</div>
-  <div style={{ border: '1px solid black'}} >20</div>
-  <div style={{ border: '1px solid black'}}>20</div>
-</Grid>      
-        </>
-      );
-    }
+      <Grid templateColumns="repeat(3, 5fr)" gap="2" color={"orange"}
+     bg={{ base: "white", md: "gray.100", lg: "blue.100" ,}} height="100vh" >
+      <div style={{ border: '1px solid black'}}>20</div>
+      <div style={{ border: '1px solid black'}}>20</div>
+      <div style={{ border: '1px solid black'  }} >20</div>
+      <div style={{ border: '1px solid black' }}>20</div>
+      <div style={{ border: '1px solid black' }}>20</div>
+      <div style={{ border: '1px solid black'}} >20</div>
+      <div style={{ border: '1px solid black'}}>20</div>
+      <div style={{ border: '1px solid black'}} >20</div>
+      <div style={{ border: '1px solid black'}}>20</div>
+        </Grid>
+    </>
+  )
+}
+       
