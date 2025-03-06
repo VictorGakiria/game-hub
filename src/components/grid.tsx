@@ -15,6 +15,7 @@ import { FaRegFaceLaughWink } from "react-icons/fa6";
 import { SiBugatti } from "react-icons/si";
 
 import { FaRegFaceGrinTongueSquint } from "react-icons/fa6";
+import { Tabs } from "@chakra-ui/react"
 
 
 
@@ -40,6 +41,13 @@ export default function Grids(){
 
 
 <h6 style={{ padding: '30px', textAlign:'center', width: '100vw', backgroundColor: 'silver'}}>K  A  IZ  E  N   MOTORS </h6>
+<Tabs.Root>
+  <Tabs.List>
+    <Tabs.Trigger />
+    <Tabs.Indicator />
+  </Tabs.List>
+  <Tabs.Content />
+</Tabs.Root>
 
       <Grid templateColumns="repeat(3, 5fr)" gap="2" color={"orange"}
      bg={{ base: "white", md: "gray.100", lg: "blue.100" ,}} height="100vh" >
