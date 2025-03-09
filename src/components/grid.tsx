@@ -16,6 +16,11 @@ import { SiBugatti } from "react-icons/si";
 
 import { FaRegFaceGrinTongueSquint } from "react-icons/fa6";
 import { Tabs, TabList, Tab, TabPanels, TabPanel } from "@chakra-ui/react"
+import { MdOutlineMail } from "react-icons/md";
+import { FaFacebookF } from "react-icons/fa";
+import { BsTwitterX } from "react-icons/bs";
+
+
 
 
 
@@ -30,7 +35,7 @@ export default function Grids(){
     <>
       <div style={{ border: '1px solid black', backgroundColor:'black',
          height:'100vh' , width:'200px', float:'left'}}
-         >
+         > 
           <Box as="ul" listStyleType ='none' paddingInline={'20px'} 
           paddingBlock={'20px'} style={{ gap: '10px' }}>
          <li style={{ marginBottom: '30px', display: 'flex', alignItems:'center' }}><FaRegFaceLaughWink style={{ marginRight: '10px' }} />BUDGET CARS </li>
@@ -43,11 +48,32 @@ export default function Grids(){
 <h6 style={{ padding: '30px', textAlign:'center', width: '100vw', backgroundColor: 'silver'}}>K  A  IZ  E  N   MOTORS </h6>
 <Tabs>
   <TabList>
-    <Tab>Page 1</Tab>
-    <Tab>Page 2</Tab>
+    <Tab _selected={{ color: 'white', bg: 'red', borderRadius: '10px solid white' }} _hover={{ bg: 'blue.300' }}> Contacts</Tab>
+    <Tab _selected={{ color: 'white', bg: 'red' }} _hover={{ bg: 'blue.300' }}>FAQs</Tab>
   </TabList>
   <TabPanels>
-    <TabPanel> Main </TabPanel>
+    <TabPanel>
+      <ul style={{ textDecoration: 'none', listStyleType: 'none', padding: 0 }}>
+        <li style={{ display: 'flex', alignItems: 'center', marginBottom: '10px' }}>
+          <MdOutlineMail style={{ marginRight: '10px' }} />
+          <a href="mailto:infokaizenmotors.co.ke" style={{ textDecoration: 'none', color: 'inherit' }} onMouseOver={(e) => e.currentTarget.style.color = 'grey'} onMouseOut={(e) => e.currentTarget.style.color = 'inherit'}>
+        infokaizenmotors.co.ke
+          </a>
+        </li>
+        <li style={{ display: 'flex', alignItems: 'center', marginBottom: '10px' }}>
+          <FaFacebookF style={{ marginRight: '10px' }} />
+          <a href="https://www.facebook.com/KaizenMotors" style={{ textDecoration: 'none', color: 'inherit' }} onMouseOver={(e) => e.currentTarget.style.color = 'grey'} onMouseOut={(e) => e.currentTarget.style.color = 'inherit'}>
+        Kaizen Motors
+          </a>
+        </li>
+        <li style={{ display: 'flex', alignItems: 'center', marginBottom: '10px' }}>
+          <BsTwitterX style={{ marginRight: '10px' }} />
+          <a href="https://www.twitter.com/KaizenMotors" style={{ textDecoration: 'none', color: 'inherit' }} onMouseOver={(e) => e.currentTarget.style.color = 'grey'} onMouseOut={(e) => e.currentTarget.style.color = 'inherit'}>
+        Kaizen Motors
+          </a>
+        </li>
+      </ul>
+    </TabPanel>
     <TabPanel> Content</TabPanel>
   </TabPanels>
 </Tabs>
