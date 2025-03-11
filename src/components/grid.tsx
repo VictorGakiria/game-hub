@@ -21,6 +21,9 @@ import { FaFacebookF } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
 import { GiBirdTwitter } from "react-icons/gi";
 import { useToast, Button } from "@chakra-ui/react";
+import { Avatar, AvatarGroup } from "@chakra-ui/react"
+
+
 
 
 
@@ -106,11 +109,13 @@ export default function Grids() {
       >
         K A IZ E N MOTORS
 
-
-        <button onClick={handleSubmit} style={{ float: "right" , color:'white' ,backgroundColor:'red',borderRadius:'5px',border:'none' , width:'100px' , height:'30px'}}>
-          Log Out
-        </button>
-      </h6>
+<button onClick={handleSubmit} style={{ float: "right", color: 'white', backgroundColor: 'red', borderRadius: '5px', border: 'none', width: '100px', height: '30px' }}>
+  Log Out
+</button>
+<AvatarGroup style={{ float: "right", marginRight: "10px" }}>
+  <Avatar name="Victor Gakiria" src="path_to_image.jpg" />
+</AvatarGroup>
+              </h6>
       <Tabs>
         <TabList>
           <Tab
