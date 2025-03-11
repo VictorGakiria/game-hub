@@ -36,10 +36,11 @@ export default function Grids() {
 
   const handleSubmit = () => {
     toast({
-      title: "Submitted",
-      status: "success",
-      duration: 3000,
+      title: "Logged Out Successfully!",
+      status: 'success',
+      duration: 300000,
       isClosable: true,
+      position: "top",
     });
   };
 
@@ -104,6 +105,11 @@ export default function Grids() {
         }}
       >
         K A IZ E N MOTORS
+
+
+        <button onClick={handleSubmit} style={{ float: "right" , color:'white' ,backgroundColor:'red',borderRadius:'5px',border:'none' , width:'100px' , height:'30px'}}>
+          Log Out
+        </button>
       </h6>
       <Tabs>
         <TabList>
