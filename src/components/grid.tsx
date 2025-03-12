@@ -1,38 +1,7 @@
-import { Grid, Spacer, Box } from "@chakra-ui/react"
-import { color } from "framer-motion"
-import { FaCarSide } from "react-icons/fa6";
-import { FaCar } from "react-icons/fa";
-import { FaCarAlt } from "react-icons/fa";
-import { FaRegFaceGrinStars } from "react-icons/fa6";
-import { FaGrinStars } from "react-icons/fa";
-import { FaRegStar } from "react-icons/fa";
-import { FaStar } from "react-icons/fa";
-import { FaStarHalfAlt } from "react-icons/fa";
-import { FaStarOfLife } from "react-icons/fa";
-import { FaStarAndCrescent } from "react-icons/fa";
-import { FaStarOfDavid } from "react-icons/fa";
-import { FaRegFaceLaughWink } from "react-icons/fa6";
-import { SiBugatti } from "react-icons/si";
-
-import { FaRegFaceGrinTongueSquint } from "react-icons/fa6";
-import { Tabs, TabList, Tab, TabPanels, TabPanel } from "@chakra-ui/react"
+import { Grid, Spacer, Box, Flex, Text, Button, Avatar, AvatarGroup, Tabs, TabList, Tab, TabPanels, TabPanel, useToast } from "@chakra-ui/react";
+import { FaRegLaughWink, FaRegGrinTongueSquint, FaGrinStars, FaFacebookF } from "react-icons/fa";
 import { MdOutlineMail } from "react-icons/md";
-import { FaFacebookF } from "react-icons/fa";
-import { BsTwitterX } from "react-icons/bs";
 import { GiBirdTwitter } from "react-icons/gi";
-import { useToast, Button } from "@chakra-ui/react";
-import { Avatar, AvatarGroup } from "@chakra-ui/react"
-
-
-
-
-
-
-
-
-
-
-
 
 export default function Grids() {
   const toast = useToast();
@@ -41,182 +10,129 @@ export default function Grids() {
     toast({
       title: "Logged Out Successfully!",
       status: 'success',
-      duration: 300000,
+      duration: 3000,
       isClosable: true,
       position: "top",
     });
   };
 
-  const breakpoints = {};
-
   return (
-    <>
-      <div
-        style={{
-          border: "1px solid black",
-          backgroundColor: "black",
-          height: "100vh",
-          width: "200px",
-          float: "left",
-        }}
+    <Flex height="100vh" flexDirection="column">
+      <Flex
+        as="header"
+        width="100%"
+        padding="20px"
+        backgroundColor="gray.700"
+        color="white"
+        alignItems="center"
+        justifyContent="space-between"
       >
+        <Text fontSize="2xl" fontWeight="bold">
+          K A I Z E N MOTORS
+        </Text>
+        <Flex alignItems="center">
+          <AvatarGroup size="md" max={2} marginRight="20px">
+            <Avatar name="Victor Gakiria" src="path_to_image.jpg" />
+          </AvatarGroup>
+          <Button colorScheme="red" onClick={handleSubmit}>
+            Log Out
+          </Button>
+        </Flex>
+      </Flex>
+
+      <Flex flex="1">
         <Box
-          as="ul"
-          listStyleType="none"
-          paddingInline={"20px"}
-          paddingBlock={"20px"}
-          style={{ gap: "10px" }}
+          width="200px"
+          backgroundColor="gray.800"
+          color="white"
+          padding="20px"
         >
-          <li
-            style={{
-              marginBottom: "30px",
-              display: "flex",
-              alignItems: "center",
-            }}
-          >
-            <FaRegFaceLaughWink style={{ marginRight: "10px" }} />
-            BUDGET CARS
-          </li>
-          <li
-            style={{
-              marginBottom: "30px",
-              display: "flex",
-              alignItems: "center",
-            }}
-          >
-            <FaRegFaceGrinTongueSquint style={{ marginRight: "10px" }} />
-            CLASS CARS
-          </li>
-          <li
-            style={{
-              marginBottom: "30px",
-              display: "flex",
-              alignItems: "center",
-            }}
-          >
-            <FaGrinStars style={{ marginRight: "10px" }} /> SUV'S
-          </li>
+          <Box as="ul" listStyleType="none" paddingInline="0" gap="10px">
+            <Box as="li" marginBottom="30px" display="flex" alignItems="center">
+              <FaRegLaughWink style={{ marginRight: "10px" }} />
+              BUDGET CARS
+            </Box>
+            <Box as="li" marginBottom="30px" display="flex" alignItems="center">
+              <FaRegGrinTongueSquint style={{ marginRight: "10px" }} />
+              CLASS CARS
+            </Box>
+            <Box as="li" marginBottom="30px" display="flex" alignItems="center">
+              <FaGrinStars style={{ marginRight: "10px" }} /> SUV'S
+            </Box>
+          </Box>
         </Box>
-      </div>
 
-      <h6
-        style={{
-          padding: "30px",
-          textAlign: "center",
-          width: "100vw",
-          backgroundColor: "silver",
-        }}
-      >
-        K A IZ E N MOTORS
+        <Box flex="1" padding="20px">
+          <Tabs>
+            <TabList>
+              <Tab _selected={{ color: "white", bg: "red" }} _hover={{ bg: "blue.300" }}>
+                Contacts
+              </Tab>
+              <Tab _selected={{ color: "white", bg: "red" }} _hover={{ bg: "blue.300" }}>
+                FAQs
+              </Tab>
+            </TabList>
+            <TabPanels>
+              <TabPanel>
+                <Box as="ul" listStyleType="none" padding="0">
+                  <Box as="li" display="flex" alignItems="center" marginBottom="10px">
+                    <MdOutlineMail style={{ marginRight: "10px" }} />
+                    <a
+                      href="mailto:infokaizenmotors.co.ke"
+                      style={{ textDecoration: "none", color: "inherit" }}
+                      onMouseOver={(e) => (e.currentTarget.style.color = "grey")}
+                      onMouseOut={(e) => (e.currentTarget.style.color = "inherit")}
+                    >
+                      infokaizenmotors.co.ke
+                    </a>
+                  </Box>
+                  <Box as="li" display="flex" alignItems="center" marginBottom="10px">
+                    <FaFacebookF style={{ marginRight: "10px" }} />
+                    <a
+                      href="https://www.facebook.com/KaizenMotors"
+                      style={{ textDecoration: "none", color: "inherit" }}
+                      onMouseOver={(e) => (e.currentTarget.style.color = "grey")}
+                      onMouseOut={(e) => (e.currentTarget.style.color = "inherit")}
+                    >
+                      Kaizen Motors
+                    </a>
+                  </Box>
+                  <Box as="li" display="flex" alignItems="center" marginBottom="10px">
+                    <GiBirdTwitter style={{ marginRight: "10px" }} />
+                    <a
+                      href="https://www.twitter.com/KaizenMotors"
+                      style={{ textDecoration: "none", color: "inherit" }}
+                      onMouseOver={(e) => (e.currentTarget.style.color = "grey")}
+                      onMouseOut={(e) => (e.currentTarget.style.color = "inherit")}
+                    >
+                      Kaizen Motors
+                    </a>
+                  </Box>
+                </Box>
+              </TabPanel>
+              <TabPanel>Content</TabPanel>
+            </TabPanels>
+          </Tabs>
 
-<button onClick={handleSubmit} style={{ float: "right", color: 'white', backgroundColor: 'red', borderRadius: '5px', border: 'none', width: '100px', height: '30px' }}>
-  Log Out
-</button>
-<div style={{ position: "absolute", top: "30px", right: "120px" }}>
-  <AvatarGroup>
-    <Avatar name="Victor Gakiria" src="path_to_image.jpg" />
-  </AvatarGroup>
-</div>
-              </h6>
-      <Tabs>
-        <TabList>
-          <Tab
-            _selected={{ color: "white", bg: "red", borderRadius: "10px solid white" }}
-            _hover={{ bg: "blue.300" }}
+          <Grid
+            templateColumns="repeat(3, 1fr)"
+            gap={4}
+            color="orange"
+            bg={{ base: "white", md: "gray.100", lg: "blue.100" }}
+            padding="20px"
           >
-            Contacts
-          </Tab>
-          <Tab _selected={{ color: "white", bg: "red" }} _hover={{ bg: "blue.300" }}>
-            FAQs
-          </Tab>
-        </TabList>
-        <TabPanels>
-          <TabPanel>
-            <ul
-              style={{
-                textDecoration: "none",
-                listStyleType: "none",
-                padding: 0,
-              }}
-            >
-              <li
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  marginBottom: "10px",
-                }}
-              >
-                <MdOutlineMail style={{ marginRight: "10px" }} />
-                <a
-                  href="mailto:infokaizenmotors.co.ke"
-                  style={{ textDecoration: "none", color: "inherit" }}
-                  onMouseOver={(e) => (e.currentTarget.style.color = "grey")}
-                  onMouseOut={(e) => (e.currentTarget.style.color = "inherit")}
-                >
-                  infokaizenmotors.co.ke
-                </a>
-              </li>
-              <li
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  marginBottom: "10px",
-                }}
-              >
-                <FaFacebookF style={{ marginRight: "10px" }} />
-                <a
-                  href="https://www.facebook.com/KaizenMotors"
-                  style={{ textDecoration: "none", color: "inherit" }}
-                  onMouseOver={(e) => (e.currentTarget.style.color = "grey")}
-                  onMouseOut={(e) => (e.currentTarget.style.color = "inherit")}
-                >
-                  Kaizen Motors
-                </a>
-              </li>
-              <li
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  marginBottom: "10px",
-                }}
-              >
-                <GiBirdTwitter style={{ marginRight: "10px" }} />
-                <a
-                  href="https://www.twitter.com/KaizenMotors"
-                  style={{ textDecoration: "none", color: "inherit" }}
-                  onMouseOver={(e) => (e.currentTarget.style.color = "grey")}
-                  onMouseOut={(e) => (e.currentTarget.style.color = "inherit")}
-                >
-                  Kaizen Motors
-                </a>
-              </li>
-            </ul>
-          </TabPanel>
-          <TabPanel>Content</TabPanel>
-        </TabPanels>
-      </Tabs>
+            {Array(9).fill("").map((_, index) => (
+              <Box key={index} border="1px solid black" padding="20px">
+                20
+              </Box>
+            ))}
+          </Grid>
 
-      <Grid
-        templateColumns="repeat(3, 5fr)"
-        gap="2"
-        color={"orange"}
-        bg={{ base: "white", md: "gray.100", lg: "blue.100" }}
-        height="100vh"
-      >
-        <div style={{ border: "1px solid black" }}>20</div>
-        <div style={{ border: "1px solid black" }}>20</div>
-        <div style={{ border: "1px solid black" }}>20</div>
-        <div style={{ border: "1px solid black" }}>20</div>
-        <div style={{ border: "1px solid black" }}>20</div>
-        <div style={{ border: "1px solid black" }}>20</div>
-        <div style={{ border: "1px solid black" }}>20</div>
-        <div style={{ border: "1px solid black" }}>20</div>
-        <div style={{ border: "1px solid black" }}>20</div>
-      </Grid>
-
-      <Button onClick={handleSubmit} colorScheme="blue" mt={4}>
-        Submit
-      </Button>
-    </>
+          <Button onClick={handleSubmit} colorScheme="blue" mt={4}>
+            Submit
+          </Button>
+        </Box>
+      </Flex>
+    </Flex>
   );
 }
