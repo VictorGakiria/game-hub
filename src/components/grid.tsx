@@ -112,9 +112,11 @@ export default function Grids() {
 <button onClick={handleSubmit} style={{ float: "right", color: 'white', backgroundColor: 'red', borderRadius: '5px', border: 'none', width: '100px', height: '30px' }}>
   Log Out
 </button>
-<AvatarGroup style={{ float: "right", marginRight: "10px" }}>
-  <Avatar name="Victor Gakiria" src="path_to_image.jpg" />
-</AvatarGroup>
+<div style={{ position: "absolute", top: "30px", right: "120px" }}>
+  <AvatarGroup>
+    <Avatar name="Victor Gakiria" src="path_to_image.jpg" />
+  </AvatarGroup>
+</div>
               </h6>
       <Tabs>
         <TabList>
